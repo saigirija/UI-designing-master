@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap");
+
+@import "../Components/Footer/footer";
+@import "./mixins";
+@import "../Components/Header/header";
+@import "../Components/Main/HeroSection/hero_section";
+@import "../Components/Main/Testimonials/testimonials";
+@import "../Components/Chat/chat";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Readex Pro", sans-serif;
+  color: $c;
+}
+body {
+  background-color: $sb;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $b;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $c;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $sb;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: $c;
+  background: none;
+  border: 2px solid $c;
+  cursor: pointer;
+  margin: 10px 0px;
+  &:hover,
+  &:focus {
+    background-color: $c;
+    color: $b;
+  }
+}
+.chat_container {
+  position: sticky;
+  bottom: 5vh;
+  padding: 0;
+}

@@ -1,0 +1,38 @@
+@mixin mQ($args...) {
+  @if length($args) == 1 {
+    @media screen and (max-width: nth($args, 1)) {
+      @content;
+    }
+  }
+  @if length($args) == 2 {
+    @media screen and (max-width: nth($args, 1)) and (min-width: nth($args, 2)) {
+      @content;
+    }
+  }
+}
+
+@mixin flexbox($parm...) {
+  display: flex;
+  @if length($parm) == 1 && $parm== "column" {
+    flex-direction: nth($parm, 1);
+  }
+  @if length($parm) == 2 {
+    flex-direction: nth($parm, 1);
+    justify-content: nth($parm, 2);
+  }
+  @include mQ(767px) {
+    flex-wrap: wrap;
+  }
+}
+
+$b: #003349;
+$sb: #0077c8;
+$c: #ffffff;
+$sc: #969797;
+$padding: 20px 5%;
+$sf: 0.8rem;
+$vsf: 0.7rem;
+$msf: 1.2rem;
+$mvsf: 1rem;
+$c_padding: 10px 0px;
+$mmb: 20px;

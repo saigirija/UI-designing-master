@@ -1,0 +1,10 @@
+@import "../../styles/mixins";
+
+.chat_app {
+  position: sticky;
+  left: 195vh;
+  padding: 10px;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: #fff;
+}

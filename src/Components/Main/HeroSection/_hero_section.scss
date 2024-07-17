@@ -1,0 +1,45 @@
+@import "../../../styles/mixins";
+
+.hero_section {
+  position: relative;
+  margin-bottom: 20px;
+  i {
+    font-size: 3rem;
+    @include mQ(767px) {
+      font-size: 2rem;
+    }
+  }
+  img {
+    width: 100%;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    @include mQ(767px) {
+      display: none;
+    }
+  }
+  .hero_content {
+    padding: $padding;
+    position: absolute;
+    top: 0;
+    @include mQ(767px) {
+      position: static;
+      height: auto;
+    }
+    @include mQ(1024px, 768px) {
+      position: static;
+      height: auto;
+    }
+    h1 {
+      font-size: 4rem;
+      @include mQ(767px) {
+        font-size: 2rem;
+      }
+    }
+    p {
+      width: 70%;
+      margin: 20px 0px;
+      @include mQ(767px) {
+        width: 100%;
+      }
+    }
+  }
+}

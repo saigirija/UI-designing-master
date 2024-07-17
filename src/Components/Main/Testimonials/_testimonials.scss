@@ -1,0 +1,69 @@
+@import "../../../styles/mixins";
+
+.testimonials {
+  padding: $padding;
+  .testimonial_header {
+    @include flexbox(column);
+    align-items: center;
+    .separator {
+      width: 20%;
+      height: 5px;
+      border-radius: 10px;
+      background-color: $b;
+      margin: 10px 0px;
+    }
+    h2 {
+      font-size: 2rem;
+      @include mQ(767px) {
+        text-align: center;
+      }
+    }
+    p {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+  }
+  .testimonials_container {
+    @include flexbox(row, space-between);
+    margin: 20px 0px;
+    .testimonial_item {
+      position: relative;
+      background-color: $b;
+      padding: 10px;
+      width: 32%;
+      @include flexbox(column);
+      align-items: center;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      @include mQ(767px) {
+        box-shadow: none;
+        width: 100%;
+        margin-bottom: 50px;
+      }
+      img {
+        position: absolute;
+        border: 2px solid $b;
+        top: -46px;
+        height: 90px;
+        width: 90px;
+        border-radius: 50%;
+        justify-content: center;
+      }
+      h4 {
+        font-size: $sf;
+        margin-top: 50px;
+      }
+      p {
+        font-size: $vsf;
+        color: $sc;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+      i {
+        font-size: 3.2rem;
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
